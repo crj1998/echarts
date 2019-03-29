@@ -1,0 +1,335 @@
+/*
+* @Author: Chen Renjie
+* @Date:   2019-02-01 20:31:45
+* @Last Modified by:   Chen Renjie
+* @Last Modified time: 2019-02-04 19:12:10
+*/
+
+@charset "utf-8";
+body,ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+body {
+    background: #040f3c;
+}
+
+
+/**/
+.header{
+    height: 80px;
+    position: relative;
+    padding-top: 13px;
+    font-size: 36px;
+    color: #00ffff;
+    text-align: center;
+    background: url(../bg.png) top center no-repeat;
+}
+.header a.a-access{
+    position: absolute;
+    right: 3%;
+    top: -18%;
+}
+.main{
+    padding: 0 30px 30px;
+}
+/*左中右横向布局*/
+.main-left{
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+.main-middle{
+    float: left;
+    width: 30%;
+    padding: 0 10px;
+}
+.main-right{
+    float: left;
+    width: 18%;
+    padding: 0 10px;
+}
+
+.border-container {
+    position: relative;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #54dcf2;
+}
+
+.border-container span.border-span {
+    display: block;
+    position: absolute;
+    width:35px;
+    height: 35px;
+}
+
+.border-container span.top-left {
+    top: -4px;
+    left:-4px;
+    border-top: 3px solid #54dcf2;
+    border-left: 3px solid #54dcf2;
+}
+
+.border-container span.top-right {
+    top:-4px;
+    right:-4px;
+    border-top: 3px solid #54dcf2;
+    border-right: 3px solid #54dcf2;
+}
+
+.border-container span.bottom-left {
+    bottom: -4px;
+    left: -4px;
+    border-bottom: 3px solid #54dcf2;
+    border-left: 3px solid #54dcf2;
+}
+
+.border-container span.bottom-right {
+    bottom: -4px;
+    right: -4px;
+    border-bottom: 3px solid #54dcf2;
+    border-right: 3px solid #54dcf2;
+}
+.name-title{
+    font-size:20px ;
+    color: #00ffff;
+}
+
+
+/*给表格添加滚动条*/
+#tablebody {
+    display: block;
+    height: 350px;
+    overflow-y: scroll;
+    border: none;
+}
+table thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+/*关键设置：滚动条默认宽度是16px 将thead的宽度减16px*/
+table thead {
+    width: calc(100% - 0.5em);
+}
+
+#infotable{
+    border-top: 2px solid rgba(217,217,217,0.7);
+}
+#infotable tr{
+    width: calc(100% - 0.5em);
+}
+
+
+
+/*滚动条样式 css*/
+/*滚动条整体样式，高宽分别对应横竖滚动条的尺寸*/
+/*注意下面的两个冒号要紧跟着前面*/
+#tablebody::-webkit-scrollbar {
+    width: 8px;     
+    height: 0px;
+}
+/*滚动条里面小方块*/
+#tablebody::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(217,217,217,0.4);
+}
+/*滚动条里面轨道*/
+#tablebody::-webkit-scrollbar-track {
+    border: 1px solid rgba(217,217,217,0.7);
+    border-radius: 5px;
+    background: rgba(217,217,217,0);
+}
+
+/*表格样式*/
+.table-kingdargen{
+    margin-top: 6px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.table-kingdargen>thead>tr>th{
+    border-bottom: 1px solid #0f4075;
+    padding: 2px 8px;
+    text-align: center;
+    color: #419aff;
+    font-size: 12px;
+    font-weight: normal;
+    border-top: 1px solid #0f4075!important;
+}
+.table-kingdargen tbody tr td{
+    padding: 1px 8px;
+    font-size: 12px;
+    border: none;
+    color: #fff;
+}
+.table-kingdargen tbody tr:nth-child(2n){
+    background: #1d2a42;
+}
+.table-kingdargen tbody tr:hover{
+    background: #696969;
+}
+.table-kingdargen tbody tr td a{
+    color: #FFFFFF;
+}
+.table-kingdargen thead tr th:nth-child(2){
+    width: 80px;
+}
+.table-kingdargen thead tr th:nth-child(3){
+    width: 80px;
+}
+.table-kingdargen thead tr th:nth-child(4){
+    width: 80px;
+}
+.table-kingdargen thead tr th:nth-child(5){
+    width: 80px;
+}
+.table-kingdargen thead tr th:nth-child(6){
+    width: 80px;
+}
+.table-kingdargen tbody tr td:nth-child(2){
+    color: #e9aa00;
+    width: 80px;
+}
+.table-kingdargen tbody tr td:nth-child(3){
+    color: #53bf18;
+    width: 80px;
+}
+.table-kingdargen tbody tr td:nth-child(4){
+    color: #f9504a;
+    width: 80px;
+}
+.table-kingdargen tbody tr td:nth-child(5){
+    color: #12f0e9;
+    width: 80px;
+}
+.table-kingdargen tbody tr td:nth-child(6){
+    color: #FF1493;
+    width: 80px;
+}
+
+
+#radar{
+    height: 275px;
+}
+/*环形比例布局*/
+.three-pie li{
+    width: 100%;
+    border-bottom: 1px solid #2c768a;
+}
+.three-pie li:last-child{
+    border-bottom: none;
+}
+
+#sexrate,
+#floatingrate{
+    height: 130px;
+}
+
+.number-show{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+.number-show span.span-name{
+    font-size:14px ;
+    color:#fffd51 ;
+}
+.number-show span.span-number-show{
+    font-size:18px ;
+    color:#54b5b5 ;
+    font-style: italic;
+}
+.number-show li{
+    line-height: 25px;
+}
+#teacherrate,
+#courserate,
+#professionrate{
+    height: 200px;
+}
+#agelist{
+    height: 130px;
+}
+#changedetail{
+    height: 229px;
+}
+
+#juniorservice{
+    height: 190px;
+}
+#edubalance{
+    height: 203px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+* {
+    box-sizing: border-box;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+}
+.copyright a {
+    text-decoration: none;
+    color: #16a085;
+}
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    position: relative;
+    padding: 0.5em 1.5em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 1em 0.8em;
+}
+.button.type1 {
+    color: #00ffff;
+}
+.button.type1.type1::after, .button.type1.type1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+}
+.button.type1.type1::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #566473;
+    border-right-color: #566473;
+}
+.button.type1.type1::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #566473;
+    border-left-color: #566473;
+}
+.button.type1.type1:hover:after, .button.type1.type1:hover:before {
+    width: 100%;
+    height: 100%;
+}
